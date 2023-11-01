@@ -3,7 +3,7 @@ title: "Setting Up Integration Tests with Docker & Go"
 publishDate: "1 November 2023"
 description: "Hello world!!! This is an example blog post showcasing some of the cool stuff Astro Cactus theme can do."
 coverImage:
-  src: "./godocker.png"
+  src: "./godocker-1.png"
   alt: "Go Docker Cover Image "
 tags: ["Go", "Integration Testing", "Docker"]
 ---
