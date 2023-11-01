@@ -10,7 +10,8 @@ tags: ["Go", "Integration Testing", "Docker"]
 
 ## Hello World
 
-Following is an example blog post written in an mdx file. You can find me @ src/content/post/hello-world/index.mdx. Here you can add/update/delete details and watch the changes live when running in develop mode, `pnpm dev`
+I will go through how I spin up a docker container to set up some simple integration tests
+to ensure my queries actually work, without having to resort to refreshing the Neon DB console.
 
 ## Using some markdown elements
 
