@@ -58,6 +58,10 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 		<p class="mb-4">
       I'm Cruz, software engineer at Amazon. Currently diving deep into Go.
 		</p>
+    <p>
+      Currently, working on a side project called
+<a className="font-bold" href="https://gr8-limiter.vercel.app/" > Stratus</a>
+    </p>
 		<SocialList />
 	</section>
 	<section aria-label="Blog post list" class="mt-16">
@@ -72,24 +76,24 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 			}
 		</ul>
 	</section>
-	<section class="mt-16">
-		<h2 class="title mb-4 text-xl">Technologies</h2>
-		<ul class="space-y-4 sm:space-y-2">
-			{
-				cactusTech.map(({ href, title, desc }) => (
-					<li>
-						<a
-							href={href}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="cactus-link inline-block"
-						>
-							{title}
-						</a>:
-						<p class="inline-block sm:mt-2">{desc}</p>
-					</li>
-				))
-			}
-		</ul>
-	</section>
+	<!-- <section class="mt-16"> -->
+	<!-- 	<h2 class="title mb-4 text-xl">Technologies</h2> -->
+	<!-- 	<ul class="space-y-4 sm:space-y-2"> -->
+	<!-- 		{ -->
+	<!-- 			cactusTech.map(({ href, title, desc }) => ( -->
+	<!-- 				<li> -->
+	<!-- 					<a -->
+	<!-- 						href={href} -->
+	<!-- 						target="_blank" -->
+	<!-- 						rel="noopener noreferrer" -->
+	<!-- 						class="cactus-link inline-block" -->
+	<!-- 					> -->
+	<!-- 						{title} -->
+	<!-- 					</a>: -->
+	<!-- 					<p class="inline-block sm:mt-2">{desc}</p> -->
+	<!-- 				</li> -->
+	<!-- 			)) -->
+	<!-- 		} -->
+	<!-- 	</ul> -->
+	<!-- </section> -->
 </PageLayout>
