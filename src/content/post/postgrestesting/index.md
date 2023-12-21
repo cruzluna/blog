@@ -8,7 +8,7 @@ coverImage:
 tags: ["Go", "Integration Testing", "Docker"]
 ---
 
-## Hello World
+## Tldr
 
 I will go through how I spin up a docker container to set up some simple integration tests
 to ensure my queries actually work, without having to resort to refreshing the Neon DB console.
@@ -108,35 +108,3 @@ func StartTestDatabase(tb testing.TB) {
 	}
 }
 ```
-
-This is styled by Shiki, set via the [config](https://docs.astro.build/en/guides/markdown-content/#syntax-highlighting) for Astro.
-
-You can choose your own theme from this [library](https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-themes), which is currently set to Dracula, in the file `astro.config.mjs`.
-
-Here is a horizontal rule.
-
----
-
-Here is a list:
-
-- Item number 1
-- Item number 2
-- Item number 3
-
-And an ordered list:
-
-1. James Madison
-2. James Monroe
-3. John Quincy Adams
-
-Here is a table:
-
-| Item         | Price | # In stock |
-| ------------ | :---: | ---------: |
-| Juicy Apples | 1.99  |        739 |
-| Bananas      | 1.89  |          6 |
-
-## Tailwind CSS Prose styling
-
-> I'm a simple blockquote.
-> I'm styled by Tailwind CSS prose plugin
