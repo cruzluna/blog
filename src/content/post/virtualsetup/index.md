@@ -79,6 +79,6 @@ To be honest, the Linear discord webhook was not very useful, but the team did f
 The basic tech group stack is notion, Linear, Discord, & Github. I think with these building blocks, a group of people can effectively communicate
 and be productive.
 
-An honorable mention, Vercel's Github [integration](https://vercel.com/docs/deployments/git/vercel-for-github), preview deployments were great for PR reviews.
+An honorable mention, Vercel's [Github integration](https://vercel.com/docs/deployments/git/vercel-for-github), preview deployments were great for PR reviews.
 
 If you have any recommendations or suggestions, feel free to message me on [LinkedIn](https://www.linkedin.com/in/cruzluna/).
