@@ -40,3 +40,8 @@ Now it is time to rewrite one of my Go apps. Essentially it is a HTTP server. I 
 Taking a break today. Rust is mentally tiring initially to learn, but I am slowly seeing why its a powerful language. One thing I can say for sure is that the compiler
 is a good teacher. The error messages tend to be on point and are helpful in remedying bugs. My current sticking point of difficulty are the different string types and some
 of the language stuff like impl, traits, and the borrow checker.
+
+## 01/20/2024
+
+Back from vacation. I want to learn more about Wasm and I think this could be a nice little learning project to jump on. I know I tried to do the rewrite of the rate limiter, but it was annoying me and honestly I like my Go implementation and it doesn't truly interest me to completely rewrite it right now.
+This Wasm project is more intriguing at the moment. I do have two worries: 1) I am trying to learn two difficult things at the same time. 2) I am not diving deep into Go, which I want to master. My reconciliation is that at work I am going to try to use Go and this Rust learning is just a small side project to promote learning. And a side note, from some very limited research, Rust Wasm seems to be superior than Go's because of the garbage collector.
