@@ -45,3 +45,8 @@ of the language stuff like impl, traits, and the borrow checker.
 
 Back from vacation. I want to learn more about Wasm and I think this could be a nice little learning project to jump on. I know I tried to do the rewrite of the rate limiter, but it was annoying me and honestly I like my Go implementation and it doesn't truly interest me to completely rewrite it right now.
 This Wasm project is more intriguing at the moment. I do have two worries: 1) I am trying to learn two difficult things at the same time. 2) I am not diving deep into Go, which I want to master. My reconciliation is that at work I am going to try to use Go and this Rust learning is just a small side project to promote learning. And a side note, from some very limited research, Rust Wasm seems to be superior than Go's because of the garbage collector.
+
+## 02/03/2024
+
+Rust is hard. I am still learning lots but I am struggling to find a good project to work. I am a bit spread thin at the moment with Rust, moving to a new city, and preparing for my new job. Either way, I am going to a Rust mixer in NYC next week and
+I think this will fun to meet other Rustaceans. I am going to read the Pingora code base and familiarize myself with some production Rust code.
