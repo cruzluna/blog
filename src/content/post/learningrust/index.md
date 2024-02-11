@@ -50,3 +50,9 @@ This Wasm project is more intriguing at the moment. I do have two worries: 1) I 
 
 Rust is hard. I am still learning lots but I am struggling to find a good project to work. I am a bit spread thin at the moment with Rust, moving to a new city, and preparing for my new job. Either way, I am going to a Rust mixer in NYC next week and
 I think this will fun to meet other Rustaceans. I am going to read the Pingora code base and familiarize myself with some production Rust code.
+
+## 02/10/2024
+
+Ummm...so I am jumping between like three projects in Rust and haven't been able to make significant progress in any of them due to my unfamiliarity with Rust as the language. Everything still feels very hard and nothing
+comes natural like Golang. I am starting the book Rust In Action. I think this will be a good referene of some little projects I can code along with to get a better idea. I also think once I find a reasonable
+project to do in Rust, then I can get the ball rolling even faster. But, I think Rust is just hard in general and these struggles are somewhat normal, especially for someone without systems programming experience.
