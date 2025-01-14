@@ -9,6 +9,20 @@ tags: ["rust", "learning"]
 
 ---
 
+## 1/13/2025
+
+I worked on a side project that was my most "complex" Rust project, but really it was a simple CLI
+that sorted some tasks and scheduled them in my Google calendar. It helped me get a taste of async Rust, traits, Serde,
+and the borrow checker. Like most side projects, I didn't finish it once I got the core functionality working and
+I got busy at work :/ ... But this year will be different....lol . I have a realistic Rust plan for 2025
+that will let me play with Rust in my free time and I will do some side projects as I find something interesting to work on.
+
+Here is my 2025 plan created by Claude:
+<a href="https://pastebin.com/iPLGf09F" target="_blank">paste bin w/plan</a>
+
+I will use this blog to keep me accountable and to document my progress. Almost a year in my career, I have more of a
+grip of my time and expectations.
+
 ## 12/28/2023
 
 I have been diving into Go lately because it is fun for me. Go’s simplicity, static typed system, and concurrency support make it a very intriguing language and fun experience while learning. Recently, theres a project that a group of friends want to jump on and it requires either Typescript or Rust. All of us are proficient in TS enough to begin prototyping, but this type of project is supposed to be a learning experience, rather than a time crunch to deliver. As a result, we are choosing to go with Rust. For me, I am conflicted because I am currently diving into Go, and learning Rust will mean I have competing interests for my brain’s learning capabilities. Here is my reasoning to learn Rust and to simultaneously dive into Go:
