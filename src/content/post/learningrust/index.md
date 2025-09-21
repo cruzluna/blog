@@ -3,6 +3,7 @@ title: "Rust Learning Journey"
 description: "This posts describes my process of learning Rust, and will act as a log of my journey"
 publishDate: "1 Jan 2024"
 tags: ["rust", "learning"]
+draft: true
 ---
 
 # Learning rust
