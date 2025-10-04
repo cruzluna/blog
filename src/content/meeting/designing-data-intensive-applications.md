@@ -15,7 +15,7 @@ We're diving into Martin Kleppmann's comprehensive guide to building reliable, s
 | Chapter | Topic | Meeting Date | Meeting Link |
 |---------|-------|--------------|--------------|
 | **Part I: Foundation of Data Systems** | | | |
-| 1 | Reliable, Scalable, and Maintainable Applications | October 11 2025 | - |
+| 1 | Reliable, Scalable, and Maintainable Applications | October 11 2025  10:30 AM PST| - |
 | 2 | Data Models and Query Languages | TBD | - |
 | 3 | Storage and Retrieval | TBD | - |
 | 4 | Encoding and Evolution | TBD | - |
