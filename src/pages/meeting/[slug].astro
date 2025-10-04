@@ -1,0 +1,77 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "@/layouts/Base";
+
+export async function getStaticPaths() {
+	const meetings = await getCollection("meeting");
+	return meetings.map((meeting) => ({
+		params: { slug: meeting.slug },
+		props: { meeting },
+	}));
+}
+
+const { meeting } = Astro.props;
+const { Content } = await meeting.render();
+---
+
+<PageLayout meta={{ 
+	title: `${meeting.data.title} - Book Club Meeting`,
+	description: `Book club discussion for ${meeting.data.title} by ${meeting.data.author}` 
+}}>
+	<article class="prose dark:prose-invert max-w-none">
+		<header class="mb-8">
+			<h1 class="title mb-2">{meeting.data.title}</h1>
+			<p class="text-xl text-gray-600 dark:text-gray-400 mb-4">by {meeting.data.author}</p>
+			<div class="flex flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-400">
+				<span>[date] {meeting.data.startDate.toLocaleDateString('en-US', { 
+					month: 'short', 
+					year: 'numeric' 
+				})}</span>
+				<span>[type] {meeting.data.bookType}</span>
+				{meeting.data.genre && <span>[genre] {meeting.data.genre}</span>}
+			</div>
+		</header>
+
+		{meeting.data.summary && (
+			<div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mb-6">
+				<h2 class="text-lg font-semibold mb-2">Summary</h2>
+				<p>{meeting.data.summary}</p>
+			</div>
+		)}
+
+		{meeting.data.keyTakeaways.length > 0 && (
+			<div class="mb-6">
+				<h2 class="text-lg font-semibold mb-3">Key Takeaways</h2>
+				<ul class="list-disc list-inside space-y-1">
+					{meeting.data.keyTakeaways.map((takeaway) => (
+						<li>{takeaway}</li>
+					))}
+				</ul>
+			</div>
+		)}
+
+		{meeting.data.discussionQuestions.length > 0 && (
+			<div class="mb-6">
+				<h2 class="text-lg font-semibold mb-3">Discussion Questions</h2>
+				<ul class="list-disc list-inside space-y-1">
+					{meeting.data.discussionQuestions.map((question) => (
+						<li>{question}</li>
+					))}
+				</ul>
+			</div>
+		)}
+
+		{meeting.data.participants.length > 0 && (
+			<div class="mb-6">
+				<h2 class="text-lg font-semibold mb-3">Participants</h2>
+				<p class="text-gray-600 dark:text-gray-400">
+					{meeting.data.participants.join(", ")}
+				</p>
+			</div>
+		)}
+
+		<div class="prose dark:prose-invert">
+			<Content />
+		</div>
+	</article>
+</PageLayout>

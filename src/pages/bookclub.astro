@@ -1,0 +1,110 @@
+---
+import PageLayout from "@/layouts/Base";
+import { getAllMeetings, sortMeetingsByDate, getUpcomingMeetings, getPastMeetings } from "@/utils";
+
+const meta = {
+	title: "Book Club",
+	description: "Join our book club discussions and discover great reads",
+};
+
+const allMeetings = await getAllMeetings();
+const sortedMeetings = sortMeetingsByDate(allMeetings);
+const upcomingMeetings = getUpcomingMeetings(sortedMeetings);
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-6">
+		<h1 class="title">Book Club</h1>
+		<div class="text-xs text-gray-600 dark:text-gray-400 font-mono leading-tight whitespace-pre">
+{`       _ _
+ .-. | | |
+ |M|_|A|N|
+ |A|a|.|.|<\\
+ |T|r| | | \\\\
+ |H|t|M|Z|  \\\\
+ | |!| | |   \\>
+""""""""""""""""""`}
+		</div>
+		<p>We discuss books, papers, and get sweaty about technical topics.</p>
+		
+		{upcomingMeetings.length > 0 && (
+			<section class="mt-8">
+				<h2 class="text-xl font-semibold mb-4">Current & Upcoming Books</h2>
+				<div class="space-y-4">
+					{upcomingMeetings.map((meeting) => (
+						<div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
+							<a href={`/meeting/${meeting.slug}/`} class="hover:underline">
+								<h3 class="font-medium text-lg">{meeting.data.title}</h3>
+							</a>
+							<p class="text-gray-600 dark:text-gray-400">{meeting.data.author}</p>
+							<p class="text-sm text-gray-500 mt-1">
+								Meeting: {meeting.data.startDate.toLocaleDateString('en-US', { 
+									month: 'short', 
+									year: 'numeric' 
+								})}
+							</p>
+							{meeting.data.summary && (
+								<p class="mt-2 text-sm">{meeting.data.summary}</p>
+							)}
+						</div>
+					))}
+				</div>
+			</section>
+		)}
+
+		<section class="mt-8">
+			<h2 class="text-xl font-semibold mb-4">Current Book</h2>
+			<p class="text-lg">
+				<strong>Designing Data-Intensive Applications</strong> by Martin Kleppmann
+			</p>
+		</section>
+
+		<section class="mt-8">
+			<h2 class="text-xl font-semibold mb-4">All Discussion Summaries</h2>
+			<div class="space-y-4">
+				{sortedMeetings.map((meeting) => (
+					<div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow">
+						<a href={`/meeting/${meeting.slug}/`} class="block">
+							<div class="flex justify-between items-start">
+								<div class="flex-1">
+									<h3 class="font-semibold text-lg mb-2 hover:text-blue-600 dark:hover:text-blue-400">
+										{meeting.data.title}
+									</h3>
+									<p class="text-gray-600 dark:text-gray-400 text-sm mb-2">
+										by {meeting.data.author}
+									</p>
+									<div class="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
+										<span>[date] {meeting.data.startDate.toLocaleDateString('en-US', { 
+											month: 'short', 
+											year: 'numeric' 
+										})}</span>
+										<span>[type] {meeting.data.bookType}</span>
+										{meeting.data.genre && <span>[genre] {meeting.data.genre}</span>}
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				))}
+			</div>
+		</section>
+
+		<section class="mt-8">
+			<h2 class="text-xl font-semibold mb-4">Suggest Upcoming Books</h2>
+			<div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+				<p class="text-blue-800 dark:text-blue-200">
+					<strong>Message me on Discord/Slack</strong> with books or papers you'd like to read.
+				</p>
+			</div>
+		</section>
+
+		<section class="mt-8">
+			<h2 class="text-xl font-semibold mb-4">How We Will Meet</h2>
+			<p>
+				<strong>Zoom</strong> for the first meeting, then we'll decide between Zoom or Discord.
+				We can also meet in person if people would like to. 
+			</p>
+		</section>
+
+	</div>
+</PageLayout>
