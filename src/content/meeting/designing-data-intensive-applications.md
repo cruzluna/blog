@@ -12,13 +12,12 @@ We're diving into Martin Kleppmann's comprehensive guide to building reliable, s
 
 ## Reading Schedule
 
-| Chapter | Topic | Meeting Date | Meeting Link |
-|---------|-------|--------------|--------------|
+| Chapter | Topic | Meeting Date | Location |
+|---------|-------|--------------|----------|
 | **Part I: Foundation of Data Systems** | | | |
-| 1 | Reliable, Scalable, and Maintainable Applications | October 11 2025  10:30 AM PST| - |
-| 2 | Data Models and Query Languages | TBD | - |
-| 3 | Storage and Retrieval | TBD | - |
-| 4 | Encoding and Evolution | TBD | - |
+| 1 | Reliable, Scalable, and Maintainable Applications | October 11 2025  10:30 AM PST| Evoke Cafe Bar |
+| 2 | Data Models and Query Languages | October 19 2025 | Piedmont Cafe |
+| 3-4 | Storage and Retrieval + Encoding and Evolution | TBD | - |
 | **Part II: Distributed Data** | | | |
 | 5 | Replication | TBD | - |
 | 6 | Partitioning | TBD | - |
