@@ -69,9 +69,9 @@ The issue with this naive approach of adding a lock for each read and write is t
 at a time. Meaning if I have 10 requests for a read, they must be done one at a time and I'd assume sequentially.
 
 This is suboptimal as I should allow for multiple simultaneous read operations as its not
-mutating data that could pose a conflict. And since I have wal mode enabled, I'd think I don't need
-to impose this `lock()` pattern for each sqlite operation as unnecessary and from my interpretation of the docs
-the concurrency and blocking is handled on a database level. So adding another blocking mechanism on the application layer
+mutating data that could pose a conflict. And since I have wal mode enabled, I'd think I wouldn't need
+to impose this `lock()` pattern for each sqlite operation, since it would be unnecessary from my interpretation of the docs
+because the concurrency and blocking is handled on a database level. So adding another blocking mechanism on the application layer
 seems like overkill and will decrease the overall performance.
 
 A quick solution I though would be to use a read-write lock on the rusqlite connection:
@@ -246,7 +246,7 @@ Transfer/sec:     67.00MB
 
 # Conclusion
 
-We see that using the pooled connections significantly improved the requests per second. From 9,150 requests/second to 21,316 requests/second
+We see that using the pooled connections significantly improved the requests per second. From 9,150 requests/second to 21,316 requests/second on my local macbook.
 
 But we see that there was actually a regression in performance for the 2 vCPU server. From 2,353 requests/second to 2,197 requests/second.
 
