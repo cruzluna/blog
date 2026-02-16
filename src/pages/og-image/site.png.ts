@@ -1,10 +1,14 @@
 import type { APIContext } from "astro";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import satori, { type SatoriOptions } from "satori";
 import { html } from "satori-html";
 import { Resvg } from "@resvg/resvg-js";
 
-import GeistRegular from "@/assets/geist-400.woff";
-import GeistSemiBold from "@/assets/geist-600.woff";
+const geistRegularPath = resolve(process.cwd(), "src/assets/geist-400.woff");
+const geistSemiBoldPath = resolve(process.cwd(), "src/assets/geist-600.woff");
+const geistRegularData = readFileSync(geistRegularPath);
+const geistSemiBoldData = readFileSync(geistSemiBoldPath);
 
 const ogOptions: SatoriOptions = {
 	width: 1200,
@@ -12,13 +16,13 @@ const ogOptions: SatoriOptions = {
 	fonts: [
 		{
 			name: "Geist",
-			data: Buffer.from(GeistRegular),
+			data: geistRegularData,
 			weight: 400,
 			style: "normal",
 		},
 		{
 			name: "Geist",
-			data: Buffer.from(GeistSemiBold),
+			data: geistSemiBoldData,
 			weight: 600,
 			style: "normal",
 		},
