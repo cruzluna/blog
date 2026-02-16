@@ -3,8 +3,8 @@ import satori, { type SatoriOptions } from "satori";
 import { html } from "satori-html";
 import { Resvg } from "@resvg/resvg-js";
 
-import GeistRegular from "@fontsource/geist/files/geist-latin-400-normal.woff";
-import GeistSemiBold from "@fontsource/geist/files/geist-latin-600-normal.woff";
+import GeistRegular from "@/assets/geist-400.woff";
+import GeistSemiBold from "@/assets/geist-600.woff";
 
 const ogOptions: SatoriOptions = {
 	width: 1200,
