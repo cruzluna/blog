@@ -1,0 +1,39 @@
+---
+import type { GetStaticPaths } from "astro";
+import PageLayout from "@/layouts/Base";
+import { getAllProjects } from "@/utils";
+
+export const getStaticPaths = (async () => {
+	const projects = await getAllProjects();
+	return projects.map((project) => ({
+		params: { slug: project.slug },
+		props: { project },
+	}));
+}) satisfies GetStaticPaths;
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+---
+
+<PageLayout meta={{ title: project.data.title, description: project.data.description }}>
+	<article class="prose prose-sm prose-cactus max-w-none">
+		<header class="mb-8">
+			<h1 class="title mb-2">{project.data.title}</h1>
+			<p class="text-gray-500">{project.data.description}</p>
+			{project.data.link && (
+				<a
+					href={project.data.link}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link mt-2 inline-block text-sm"
+				>
+					View project →
+				</a>
+			)}
+		</header>
+		<section class="prose-headings:font-semibold prose-headings:text-accent-2">
+			<h2 class="text-lg">Notes</h2>
+			<Content />
+		</section>
+	</article>
+</PageLayout>

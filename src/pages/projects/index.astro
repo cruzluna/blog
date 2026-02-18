@@ -1,0 +1,20 @@
+---
+import PageLayout from "@/layouts/Base";
+import { getAllProjects } from "@/utils";
+
+const projects = await getAllProjects();
+---
+
+<PageLayout meta={{ title: "Projects", description: "Things I've built" }}>
+	<h1 class="title mb-6">Projects</h1>
+	<ul class="space-y-8">
+		{projects.map((project) => (
+			<li>
+				<a href={`/projects/${project.slug}/`} class="cactus-link block font-medium" rel="prefetch">
+					{project.data.title}
+				</a>
+				<p class="mt-1 text-sm text-gray-500">{project.data.description}</p>
+			</li>
+		))}
+	</ul>
+</PageLayout>
