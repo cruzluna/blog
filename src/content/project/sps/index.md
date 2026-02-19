@@ -8,6 +8,8 @@ link: "https://github.com/cruzluna/sps"
 
 A simple prompt storage system designed for storing, versioning, and managing prompts efficiently.
 
+Website: [sps.cruzluna.dev](https://sps.cruzluna.dev)
+
 Honestly just use git.
 
 ## Features
