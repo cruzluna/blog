@@ -33,6 +33,16 @@ const post = defineCollection({
 		}),
 });
 
+const project = defineCollection({
+	type: "content",
+	schema: z.object({
+		title: z.string().max(80),
+		description: z.string().max(200),
+		link: z.string().url().optional(),
+		draft: z.boolean().default(false),
+	}),
+});
+
 const meeting = defineCollection({
 	type: "content",
 	schema: ({ image }) =>
@@ -58,4 +68,4 @@ const meeting = defineCollection({
 		}),
 });
 
-export const collections = { post, meeting };
+export const collections = { post, project, meeting };
