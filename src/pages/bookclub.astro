@@ -1,6 +1,6 @@
 ---
 import PageLayout from "@/layouts/Base";
-import { getAllMeetings, sortMeetingsByDate, getUpcomingMeetings, getPastMeetings } from "@/utils";
+import { getAllMeetings, getUpcomingMeetings, sortMeetingsByDate } from "@/utils";
 
 const meta = {
 	title: "Book Club",
@@ -56,6 +56,9 @@ const upcomingMeetings = getUpcomingMeetings(sortedMeetings);
 			<h2 class="text-xl font-semibold mb-4">Current Book</h2>
 			<p class="text-lg">
 				<strong>Designing Data-Intensive Applications</strong> by Martin Kleppmann
+			</p>
+			<p class="text-gray-600 dark:text-gray-400 mt-2">
+				Chapter 8 — The Trouble with Distributed Systems. Meeting: week of Feb 22, 2026.
 			</p>
 		</section>
 
