@@ -14,6 +14,8 @@ We're diving into Martin Kleppmann's comprehensive guide to building reliable, s
 
 ## Reading Schedule
 
+All meetings are in person.
+
 | Chapter                                | Topic                                             | Meeting Date                 | Location       |
 | -------------------------------------- | ------------------------------------------------- | ---------------------------- | -------------- |
 | **Part I: Foundation of Data Systems** |                                                   |                              |                |
