@@ -19,11 +19,11 @@ We're diving into Martin Kleppmann's comprehensive guide to building reliable, s
 | **Part I: Foundation of Data Systems** |                                                   |                              |                |
 | 1                                      | Reliable, Scalable, and Maintainable Applications | October 11 2025 10:30 AM PST | Evoke Cafe Bar |
 | 2                                      | Data Models and Query Languages                   | October 19 2025              | Piedmont Cafe  |
-| 3-4                                    | Storage and Retrieval + Encoding and Evolution    | TBD                          | -              |
+| 3-4                                    | Storage and Retrieval + Encoding and Evolution    | Completed                    | -              |
 | **Part II: Distributed Data**          |                                                   |                              |                |
-| 5                                      | Replication                                       | TBD                          | -              |
-| 6                                      | Partitioning                                      | TBD                          | -              |
-| 7                                      | Transactions                                      | TBD                          | -              |
+| 5                                      | Replication                                       | Completed                    | -              |
+| 6                                      | Partitioning                                      | Completed                    | -              |
+| 7                                      | Transactions                                      | Completed                    | -              |
 | 8                                      | The Trouble with Distributed Systems              | week of Feb 22 2026          | -              |
 | 9                                      | Consistency and Consensus                         | TBD                          | -              |
 | **Part III: Derived Data**             |                                                   |                              |                |
