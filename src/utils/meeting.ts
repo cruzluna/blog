@@ -6,15 +6,15 @@ export async function getAllMeetings() {
 }
 
 export function sortMeetingsByDate(meetings: any[]) {
-	return meetings.sort((a, b) => b.data.meetingDate.getTime() - a.data.meetingDate.getTime());
+	return meetings.sort((a, b) => b.data.startDate.getTime() - a.data.startDate.getTime());
 }
 
 export function getUpcomingMeetings(meetings: any[]) {
 	const now = new Date();
-	return meetings.filter(meeting => meeting.data.meetingDate > now);
+	return meetings.filter((meeting) => meeting.data.startDate > now);
 }
 
 export function getPastMeetings(meetings: any[]) {
 	const now = new Date();
-	return meetings.filter(meeting => meeting.data.meetingDate <= now);
+	return meetings.filter((meeting) => meeting.data.startDate <= now);
 }
