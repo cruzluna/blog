@@ -10,7 +10,7 @@ Scrolling X and I saw this demo of Claude Code Agent teams:
 <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">opus 4.6 with new “swarm” mode vs. opus 4.6 without it.<br><br>2.5x faster + done better.<br><br>swarms work!<br><br>and multi-agent tmux view is *genius*.<br><br>insane claude code update. <a href="https://t.co/YjGgBoYatb">pic.twitter.com/YjGgBoYatb</a></p>&mdash; Mckay Wrigley (@mckaywrigley) <a href="https://twitter.com/mckaywrigley/status/2019557279222439962?ref_src=twsrc%5Etfw">February 5, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 As a power user of my terminal and terminal agents, this new Claude Code feature looked very intriguing. Mostly because
-I am sort of already doing this myself using tmux. I usually spawn N number of panes for each agent to work into. Having the agent
+I am sort of already doing this myself using tmux. I usually spawn N number of panes for each agent to work in. Having the agent
 be the delegate (or leader) of this orchestration looked like something that I could throw into my tool chest.
 
 At Amazon we are not allowed to use Claude Code, instead we use [Kiro Cli](https://kiro.dev/cli/), so for obvious reasons I don't
