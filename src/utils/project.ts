@@ -8,7 +8,7 @@ export async function getAllProjects() {
 }
 
 export function sortProjects(projects: Array<CollectionEntry<"project">>) {
-	const order = ["jkl", "sps", "cheapcompute"];
+	const order = ["jkl", "sps", "cheapcompute", "ade"];
 	return projects.sort((a, b) => {
 		const indexA = order.indexOf(a.slug);
 		const indexB = order.indexOf(b.slug);
