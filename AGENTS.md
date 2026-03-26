@@ -6,7 +6,7 @@ This file provides guidelines for agentic coding agents operating in this reposi
 
 | Command          | Action                                          |
 | :--------------- | :---------------------------------------------- |
-| `pnpm dev`       | Start local dev server at `localhost:3000`      |
+| `pnpm dev`       | Start local dev server at `localhost:4321`      |
 | `pnpm build`     | Build production site to `./dist/`              |
 | `pnpm postbuild` | Run Pagefind to build static search index       |
 | `pnpm preview`   | Preview production build locally                |
@@ -161,3 +161,11 @@ src/
 ## No Existing Cursor/Copilot Rules
 
 No Cursor rules (`.cursor/rules/` or `.cursorrules`) or Copilot instructions (`.github/copilot-instructions.md`) exist in this repository.
+
+## Cursor Cloud specific instructions
+
+- **Single service:** This is a static Astro blog with zero external dependencies (no databases, Docker, APIs, or env vars). The only service to run is the Astro dev server.
+- **Dev server port:** `pnpm dev` starts on **port 4321** (Astro's default), not port 3000.
+- **Pre-existing type errors:** `pnpm check` reports 5 errors (unused imports in `about.astro`, `index.astro` and implicit `any` in `meeting/[slug].astro`). These are pre-existing and not introduced by agent changes.
+- **Pagefind search:** Search only works after a production build (`pnpm build && pnpm postbuild`). It does not work in dev mode.
+- **No test framework:** There are no automated tests. Validation is done via `pnpm check` (type checking) and `pnpm format` (formatting).
