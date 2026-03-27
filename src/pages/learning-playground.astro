@@ -1,0 +1,92 @@
+---
+import PageLayout from "@/layouts/Base";
+import { learningPlaygroundSections, recentBookmarks } from "../data/learning-playground";
+
+const meta = {
+	title: "Learning Playground",
+	description:
+		"A living snapshot of what I am prepping, learning, and reading right now.",
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-8">
+		<header class="space-y-3">
+			<h1 class="title">Learning Playground</h1>
+			<p>
+				A running list of what I am prepping, learning, and reading. This page is easy to update in
+				<code>src/data/learning-playground.ts</code>.
+			</p>
+		</header>
+
+		{
+			learningPlaygroundSections.map((section) => (
+				<section id={section.id} class="space-y-3 rounded-lg border border-gray-200 p-5 dark:border-gray-700">
+					<div class="space-y-2">
+						<h2 class="text-xl font-semibold">{section.title}</h2>
+						<p class="text-sm text-gray-600 dark:text-gray-400">{section.description}</p>
+					</div>
+					<ul class="space-y-3">
+						{section.items.map((item) => (
+							<li class="rounded border border-gray-200 p-3 dark:border-gray-700">
+								<div class="mb-1 flex items-center justify-between gap-2">
+									{item.href ? (
+										<a
+											href={item.href}
+											target="_blank"
+											rel="noreferrer noopener"
+											class="font-semibold hover:underline"
+										>
+											{item.title}
+										</a>
+									) : (
+										<p class="font-semibold">{item.title}</p>
+									)}
+									<span
+										class:list={[
+											"rounded px-2 py-1 text-xs uppercase tracking-wide",
+											item.status === "active"
+												? "bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-200"
+												: "bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-200",
+										]}
+									>
+										{item.status}
+									</span>
+								</div>
+								<p class="text-sm text-gray-700 dark:text-gray-300">{item.notes}</p>
+							</li>
+						))}
+					</ul>
+				</section>
+			))
+		}
+		<section class="space-y-3 rounded-lg border border-gray-200 p-5 dark:border-gray-700">
+			<div class="space-y-2">
+				<h2 class="text-xl font-semibold">Recent Bookmarks</h2>
+				<p class="text-sm text-gray-600 dark:text-gray-400">
+					Quick links worth revisiting. Add more in <code>src/data/learning-playground.ts</code>.
+				</p>
+			</div>
+			<ul class="space-y-3">
+				{recentBookmarks.map((bookmark) => (
+					<li class="rounded border border-gray-200 p-3 dark:border-gray-700">
+						<div class="flex items-start justify-between gap-3">
+							<a
+								href={bookmark.href}
+								target="_blank"
+								rel="noreferrer noopener"
+								class="font-semibold hover:underline"
+							>
+								{bookmark.title}
+							</a>
+							<span class="text-xs text-gray-500 dark:text-gray-400">{bookmark.addedOn}</span>
+						</div>
+						{bookmark.notes && (
+							<p class="mt-2 text-sm text-gray-700 dark:text-gray-300">{bookmark.notes}</p>
+						)}
+					</li>
+				))}
+			</ul>
+		</section>
+	</div>
+</PageLayout>
