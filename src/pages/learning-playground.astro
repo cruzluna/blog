@@ -1,6 +1,6 @@
 ---
 import PageLayout from "@/layouts/Base";
-import { learningPlaygroundSections } from "../data/learning-playground";
+import { learningPlaygroundSections, recentBookmarks } from "../data/learning-playground";
 
 const meta = {
 	title: "Learning Playground",
@@ -60,5 +60,33 @@ const meta = {
 				</section>
 			))
 		}
+		<section class="space-y-3 rounded-lg border border-gray-200 p-5 dark:border-gray-700">
+			<div class="space-y-2">
+				<h2 class="text-xl font-semibold">Recent Bookmarks</h2>
+				<p class="text-sm text-gray-600 dark:text-gray-400">
+					Quick links worth revisiting. Add more in <code>src/data/learning-playground.ts</code>.
+				</p>
+			</div>
+			<ul class="space-y-3">
+				{recentBookmarks.map((bookmark) => (
+					<li class="rounded border border-gray-200 p-3 dark:border-gray-700">
+						<div class="flex items-start justify-between gap-3">
+							<a
+								href={bookmark.href}
+								target="_blank"
+								rel="noreferrer noopener"
+								class="font-semibold hover:underline"
+							>
+								{bookmark.title}
+							</a>
+							<span class="text-xs text-gray-500 dark:text-gray-400">{bookmark.addedOn}</span>
+						</div>
+						{bookmark.notes && (
+							<p class="mt-2 text-sm text-gray-700 dark:text-gray-300">{bookmark.notes}</p>
+						)}
+					</li>
+				))}
+			</ul>
+		</section>
 	</div>
 </PageLayout>

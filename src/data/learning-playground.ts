@@ -14,6 +14,13 @@ export type LearningPlaygroundSection = {
 	items: LearningPlaygroundItem[];
 };
 
+export type RecentBookmark = {
+	title: string;
+	href: string;
+	notes?: string;
+	addedOn: string;
+};
+
 export const learningPlaygroundSections: LearningPlaygroundSection[] = [
 	{
 		id: "prepping",
@@ -65,5 +72,25 @@ export const learningPlaygroundSections: LearningPlaygroundSection[] = [
 				status: "queued",
 			},
 		],
+	},
+];
+
+export const recentBookmarks: RecentBookmark[] = [
+	{
+		title: "Architecture Notes — Caching Patterns",
+		href: "https://example.com/caching-patterns",
+		notes: "Good reminder on cache invalidation trade-offs for read-heavy paths.",
+		addedOn: "2026-03-20",
+	},
+	{
+		title: "Paper — The Tail at Scale",
+		href: "https://research.google/pubs/the-tail-at-scale/",
+		addedOn: "2026-03-18",
+	},
+	{
+		title: "Add your next bookmark here",
+		href: "https://example.com/",
+		notes: "Append new bookmarks in src/data/learning-playground.ts.",
+		addedOn: "YYYY-MM-DD",
 	},
 ];
