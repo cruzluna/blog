@@ -21,6 +21,16 @@ sections:
         - "Overall GPA: 3.96/4.0"
         - "Dean's List"
   experience:
+    - company: AWS
+      position: Software Development Engineer
+      date:
+      start_date: 2026-05
+      end_date: present
+      location: Seattle/Bellevue, WA
+      summary:
+      highlights:
+        - Annapurna Labs, Compiler
+        - Distributed systems
     - company: Amazon
       position: Software Development Engineer
       date:
